@@ -11,7 +11,7 @@ const End = () => {
             <h1 className='text-white text-center text-2xl md:text-4xl font-nunito font-bold'>
             Discover the Future with
             <br />
-            WebStudio Nepal's Blockchain Solutions
+            WebStudio Nepal Blockchain Solutions
             </h1> 
 
             <p className='  text-white px-3 text-md md:text-lg font-nunito text-justify'>
