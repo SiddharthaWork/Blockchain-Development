@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        wx: '1028px',
+        ex: '1233px',
+      },
       fontFamily: {
         nunito: ['"Nunito"', "sans-serif"],
         poppins: ['Poppins', 'sans-serif'],

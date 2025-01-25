@@ -2,7 +2,7 @@ import React from 'react'
 
 const Industry = () => {
   return (
-    <div className='w-full h-auto lg:h-auto md:h-[28rem] bg-white py-12 relative'>
+    <div className='w-full h-auto lg:h-auto md:h-[28rem] bg-white pt-12 relative'>
         <div className='max-w-7xl mx-auto space-y-10'>
         <h1 className='text-black text-center text-2xl md:text-4xl font-nunito font-bold'>
         Industries We Serve with Blockchain Development
@@ -21,7 +21,18 @@ const Industry = () => {
 
             <div className='w-[13rem] h-[15rem] rounded-lg bg-[#333333] space-y-6'>
                 <div className='w-[138px] h-[138px] rounded-full bg-white mx-auto mt-5 hover:w-[150px] hover:h-[150px] transition-all duration-700 ease-in-out'>
-                    <img src="industry1.svg" alt="industry" className='w-full h-full object-cover' />
+                    <img src="i2.svg" alt="industry" className='w-full h-full object-cover' />
+                </div>
+
+                <div className='text-white font-nunito font-bold text-center text-lg'>
+                    <h1>Finance & Banking</h1>
+                </div>
+            </div>
+    
+
+            <div className='w-[13rem] h-[15rem] rounded-lg bg-[#333333] space-y-6'>
+                <div className='w-[138px] h-[138px] rounded-full bg-white mx-auto mt-5 hover:w-[150px] hover:h-[150px] transition-all duration-700 ease-in-out'>
+                    <img src="i3.svg" alt="industry" className='w-full h-full object-cover' />
                 </div>
 
                 <div className='text-white font-nunito font-bold text-center text-lg'>
@@ -32,18 +43,7 @@ const Industry = () => {
 
             <div className='w-[13rem] h-[15rem] rounded-lg bg-[#333333] space-y-6'>
                 <div className='w-[138px] h-[138px] rounded-full bg-white mx-auto mt-5 hover:w-[150px] hover:h-[150px] transition-all duration-700 ease-in-out'>
-                    <img src="industry1.svg" alt="industry" className='w-full h-full object-cover' />
-                </div>
-
-                <div className='text-white font-nunito font-bold text-center text-lg'>
-                    <h1>Finance & Banking</h1>
-                </div>
-            </div>
-
-
-            <div className='w-[13rem] h-[15rem] rounded-lg bg-[#333333] space-y-6'>
-                <div className='w-[138px] h-[138px] rounded-full bg-white mx-auto mt-5 hover:w-[150px] hover:h-[150px] transition-all duration-700 ease-in-out'>
-                    <img src="industry1.svg" alt="industry" className='w-full h-full object-cover' />
+                    <img src="i4.svg" alt="industry" className='w-full h-full object-cover' />
                 </div>
 
                 <div className='text-white font-nunito font-bold text-center text-lg'>
@@ -55,7 +55,7 @@ const Industry = () => {
 
             <div className='w-[13rem] h-[15rem] rounded-lg bg-[#333333] space-y-6'>
                 <div className='w-[138px] h-[138px] rounded-full bg-white mx-auto mt-5 hover:w-[150px] hover:h-[150px] transition-all duration-700 ease-in-out'>
-                    <img src="industry1.svg" alt="industry" className='w-full h-full object-cover' />
+                    <img src="i5.svg" alt="industry" className='w-full h-full object-cover' />
                 </div>
 
                 <div className='text-white font-nunito font-bold text-center text-lg'>

@@ -19,9 +19,9 @@ const Form = () => {
       </div>
 
       {/* Main Form Section */}
-      <div className="flex flex-col lg:flex-row justify-center max-w-[1380px] mx-auto mt-6 rounded-xl">
+      <div className="flex flex-col lg:flex-row justify-center max-w-[1380px] mx-auto mt-6 rounded-xl ">
         {/* Left Section */}
-        <div className="bg-[#2B2B2B] relative text-white lg:w-[35rem] w-full py-8 px-6 lg:px-8 space-y-8 flex flex-col justify-start items-start rounded-t-xl lg:rounded-tr-none lg:rounded-l-xl">
+        <div className="bg-[#2B2B2B] relative text-white lg:w-[35rem] w-full py-8 px-6 lg:px-8 space-y-8 flex flex-col justify-start items-start rounded-none lg:rounded-tr-none lg:rounded-l-xl">
           <div className="w-full absolute left-[32rem] bottom-0 md:left-[22rem]">
             <img src="circle.svg" alt="" className="w-[225px] h-[223px] object-cover" />
           </div>

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Choose = () => {
-    const [selectedId, setSelectedId] = useState(null);
+    const [expandedId, setExpandedId] = useState(null);
 
     const items = [
         {
@@ -15,21 +15,21 @@ const Choose = () => {
         },
         {
             id: 2,
-            icon: "icon1.svg",
+            icon: "icon22.svg",
             title: "Customized Blockchain Solutions",
             description:
                 "We design tailored blockchain solutions to meet your unique business needs, leveraging cutting-edge technologies for optimal results.",
         },
         {
             id: 3,
-            icon: "icon1.svg",
+            icon: "icon23.svg",
             title: "Scalable and Secure Systems",
             description:
                 "Our blockchain solutions are built for scalability and security, ensuring seamless operations and protection for your business.",
         },
         {
             id: 4,
-            icon: "icon1.svg",
+            icon: "icon24.svg",
             title: "Expert Support and Maintenance",
             description:
                 "We provide ongoing support and maintenance to ensure the smooth functioning and continuous improvement of your blockchain solutions.",
@@ -51,53 +51,39 @@ const Choose = () => {
                 </h1>
 
                 {/* Card Grid */}
-                <div className="grid grid-cols-1 place-items-center md:grid-cols-4 mx-6 gap-4 relative">
+                <div className={`grid grid-cols-1 place-items-center md:grid-cols-4 mx-6 gap-4 relative ${expandedId ? 'gap-32' : 'gap-4'}`}>
                     {items.map((item) => (
-                        <motion.div
-                            key={item.id}
-                            layoutId={`card-${item.id}`}
-                            onClick={() => setSelectedId(item.id)}
-                            className="w-[150px] h-[150px] rounded-full drop-shadow-lg bg-gradient-to-t from-sky-400 to-sky-600 flex items-center justify-center cursor-pointer relative"
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ borderRadius: "0" }}
-                            transition={{ duration: 0.7 }}
-                        >
-                            <img src={item.icon} alt="Icon" />
-                        </motion.div>
-                    ))}
-
-                    <AnimatePresence>
-                        {selectedId && (
-                            <motion.div
-                                layoutId={`card-${selectedId}`}
-                                className="absolute z-50 bg-gradient-to-t from-sky-400 to-sky-600 rounded-lg drop-shadow-lg p-6"
+                        <div key={item.id} className="relative">
+                            <div
+                                onClick={() => setExpandedId(expandedId === item.id ? null : item.id)}
                                 style={{
-                                    top: `${Math.floor((selectedId - 1) / 4) * 200}px`, // Adjust for grid rows
-                                    left: `${((selectedId - 1) % 4) * 200}px`, // Adjust for grid columns
-                                    width: "500px",
-                                    height: "300px",
+                                    transition: 'all 500ms ease-in-out',
+                                    width: expandedId === item.id ? '300px' : '150px',
+                                    height: expandedId === item.id ? '300px' : '150px',
+                                    borderRadius: expandedId === item.id ? '20px' : '9999px',
                                 }}
-                                onClick={() => setSelectedId(null)}
-                                initial={{ opacity: 0, scale: 0.5 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                exit={{ opacity: 0, scale: 0.5 }}
+                                className="drop-shadow-lg bg-gradient-to-t from-sky-400 to-sky-600 flex items-center justify-center cursor-pointer hover:scale-105 transition-transform duration-300 overflow-hidden"
                             >
-                                <div className="flex flex-col justify-center items-center space-y-4 text-center">
-                                    <img
-                                        src={items.find((item) => item.id === selectedId)?.icon}
-                                        alt="Icon"
-                                        className="w-16 h-16"
-                                    />
-                                    <h1 className="text-white text-2xl font-nunito font-bold">
-                                        {items.find((item) => item.id === selectedId)?.title}
-                                    </h1>
-                                    <p className="text-white text-base">
-                                        {items.find((item) => item.id === selectedId)?.description}
-                                    </p>
-                                </div>
-                            </motion.div>
-                        )}
-                    </AnimatePresence>
+                                {expandedId !== item.id ? (
+                                    <img src={item.icon} alt="Icon" className="w-16 h-16" />
+                                ) : (
+                                    <div className="p-6 text-center">
+                                        <img
+                                            src={item.icon}
+                                            alt="Icon"
+                                            className="w-16 h-16 mx-auto mb-4"
+                                        />
+                                        <h1 className="text-white text-xl font-nunito font-bold mb-2">
+                                            {item.title}
+                                        </h1>
+                                        <p className="text-white text-sm">
+                                            {item.description}
+                                        </p>
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+                    ))}
                 </div>
 
                 <div className="flex justify-center items-center pt-8">
